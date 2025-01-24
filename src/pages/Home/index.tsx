@@ -4,9 +4,9 @@ import { Flex, Typography } from "antd"
 import SuspenseFallback from "../../components/SuspenseFallback"
 
 // Components
-import Component1 from "./components/Component1"
+// import Component1 from "../../components/Component1"
 // Dynamic imports
-// const Component1 = lazy(() => import("./components/Component1"))
+const Component1 = lazy(() => import("../../components/Component1"))
 
 const Home: FunctionComponent = () => {
   return (
@@ -16,9 +16,6 @@ const Home: FunctionComponent = () => {
       <Suspense fallback={<SuspenseFallback />}>
         <Component1 />
       </Suspense>
-
-
-      {/* <Component1 /> */}
     </Flex>
   )
 }

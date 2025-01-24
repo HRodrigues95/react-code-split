@@ -1,22 +1,22 @@
 import { FunctionComponent, lazy, Suspense } from "react";
 import { Flex, Typography } from "antd";
-// Static imports
+// Components
 import SuspenseFallback from "../../components/SuspenseFallback";
 // Styles
 
 // Dynamic imports
 const Form1 = lazy(() => import("../../components/Form1"))
 
-const Page1: FunctionComponent = () => {
+const Page2: FunctionComponent = () => {
   return (
     <Flex vertical justify='center' align='center' style={{ height: '100%' }}>
-      <Typography.Title>Page 1</Typography.Title>
+      <Typography.Title>Page 2</Typography.Title>
 
       <Suspense fallback={<SuspenseFallback />}>
-        <Form1 type='normal' />
+        <Form1 type='something' />
       </Suspense>
     </Flex>
   )
 }
 
-export default Page1
+export default Page2

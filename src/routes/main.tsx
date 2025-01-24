@@ -12,6 +12,7 @@ import Home from "../pages/Home"
 // Dynamic imports
 const NotFound = lazy(() => import('../pages/NotFound'))
 const Page1 = lazy(() => import('../pages/Page1'))
+const Page2 = lazy(() => import('../pages/Page2'))
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
         <Route element={<NormalLayout />}>
           <Route index element={<Home />} />
           <Route path='/page1' element={<Page1 />} />
+          <Route path='/page2' element={<Page2 />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
